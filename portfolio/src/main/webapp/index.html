@@ -1,18 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
+        <!--above: takes care of device width-->
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Alicia's Portfolio | Welcome</title>
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <!--Body-->
+    <body>
+        <!--Start Header-->
+        <header id = "top">
+            <div class = "container">
+                <!--class vs id-->
+                <!--id's are unique for something that occurs once-->
+                <!-- a class is for something that can be used more than once-->
+                
+                <!-- navigation-->
+                <nav>
+                    <ul> <!--unordered list-->
+                        <li class = "current"><a href="index.html">Home</a></li>
+                        <li><a href="UpdatedCSResume2020.pdf" download>Resume</a></li>
+                        <li><a href="https://www.linkedin.com/in/alicia-simon-4b4454176/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://blacklivesmatter.com" target="_blank">#BLM</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--Showcase-->
+        <section id="showcase">
+            <div id="profile">
+                <!--profile image in circle-->
+                <img src="images/profilepic.png">
+            </div>
+            <div id="intro">
+                <h1 id="name">Hi, I'm Alicia</h1>
+            </div>
+        </section>
+        <section id="about-me">
+            <img src="images/professionalnobckgd.png">
+            <!-- <div id="txt"> -->
+                <h4>Welcome</h4>
+                <h1>About Me</h1>
+                <hr>
+                <p>Welcome to my portfolio! My name is 
+                    Alicia Simon, and I am eighteen years old.
+                    I'm a Computer Science student at Xavier University 
+                    of Louisiana, a Historically Black College (HBCU) located in the heart of New Orleans. I'm a 
+                    native Louisianian from New Iberia (about two hours from New Orleans).
+                    You can learn more about me below ('About' page currently under construction).
+                </p>
+            </div>
+        </section>
+        <section id="whitespace">
+            <div>
+                <h1>Fun Facts</h1>
+                <ul>
+                    <li>I enjoy reading</li>
+                    <li>My Mom is from Nigeria (Itsekiri Tribe)</li>
+                    <li>I'm currently learning how to cook </li>
+                    <li>I enjoy social commentaries (film, art, writing) so please dm recommendations</li>
+                </ul>
+            </div>
+        </section>
+        <section id="connect">
+            <div class = "about">
+                <h3>
+                    <!--Learn More-->
+                </h3>
+                <h1 class="current">
+                    <!--Let's Connect-->
+                </h1>
+            </div>
+        </section>
+        <section id ="boxes">
+            <div class="box-container">
+                <div class="box1">
+                    <span></span> <!--edit 'span' later-->
+                    <img src="images/blackinsta.png">
+                    <h3 class="box-head">Instagram</h3>
+                    <p>Connect with me on Instagram</p>
+                    <a href="https://www.instagram.com/alicialeesimon/?hl=en" target="_blank"><button class="button" type="button">Connect</button></a>
+                </div>
+                <div class = "box2">
+                    <span></span>
+                    <img src="images/blacklinkedin.png">
+                    <h3 class="box-head">LinkedIn</h3>
+                    <p>Connect with me on LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/alicia-simon-4b4454176/" target="_blank"><button class="button" type="button">Connect</button></a>
+                </div>
+                <div class = "box3">
+                    <span></span>
+                    <img src="images/blacktwitter.png">
+                    <h3 class="box-head">Twitter</h3>
+                    <p>Connect with me on Twitter</p>
+                    <a href="https://twitter.com/aliciainjune" target="_blank"><button class="button" type="button">Connect</button></a>
+                </div>
+            </div>
+        </section>
+    <!--Footer-->
+    <footer>
+        <p>My Portfolio, Copyright &copy; 2020</p>
+        <a id="back-to-top" href="#">Top</a>
+    </footer>
+    </body>
+    <!--JavaScript-->
+    <script></script>
 </html>
