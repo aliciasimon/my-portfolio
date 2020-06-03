@@ -88,10 +88,6 @@ header a:hover{ /* when a user hovers over a button
     background-size: cover;
 }
 
-#showcase #profile img{
-    /* comment */
-}
-
 #showcase #intro #name{
     color: black;
     font-size: 45px;
@@ -112,7 +108,7 @@ header a:hover{ /* when a user hovers over a button
     text-align: center;
 } 
 
-#Connect{
+#connect{
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -136,7 +132,7 @@ header a:hover{ /* when a user hovers over a button
 }
 
 /* WhiteSpace*/
-#WhiteSpace{
+#whitespace{
     /* float: right;
     overflow: hidden;
     display: flex;
@@ -148,26 +144,26 @@ header a:hover{ /* when a user hovers over a button
 }
 
 /* About Me */ 
-#AboutMe{
+#about-me{
     display: inline-block;
     background-color: rgb(221, 221, 221);
     height: 650px;
     box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 
-#AboutMe img{
+#about-me img{
     display: inline-block;
     float: left;
 }
 
-#AboutMe h1{
+#about-me h1{
     margin-top: -2px;
     margin-bottom: 20px;
     font-size: 30px;
     text-decoration-style: solid;
 }
 
-#AboutMe h4{
+#about-me h4{
     display: inline-block;
     color: hotpink;
     margin-top: 70px;
@@ -176,7 +172,7 @@ header a:hover{ /* when a user hovers over a button
 
 }
 
-#AboutMe hr{
+#about-me hr{
     background-color: hotpink;
     width: 60px;
     height: 2px;
@@ -185,7 +181,7 @@ header a:hover{ /* when a user hovers over a button
     margin-top: -10px;
 }
 
-#AboutMe #txt p{
+#about-me p{
     /* display: inline-block; */
     margin-bottom: -50px;
     margin-top: -5px;
