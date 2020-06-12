@@ -13,6 +13,17 @@
 // limitations under the License.
 
 /**
+* Fetch the JSON string from the server
+*/
+function getJsonString(){
+    console.log("Fetching JSON String from server...");
+    fetch('/data').then(respons => response.json()).then((comment) => comment.forEach(comment)){
+        const myComment = document.getElementById('comment-section');
+        myComment.innerHTML= "";
+    }
+}
+
+/**
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
