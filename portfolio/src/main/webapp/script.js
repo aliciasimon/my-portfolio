@@ -24,6 +24,17 @@ function getJsonString(){
 }
 
 /**
+* Google Maps API
+ */
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
+}
+
+/**
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
