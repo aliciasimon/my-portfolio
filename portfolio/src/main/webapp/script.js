@@ -17,7 +17,7 @@
 */
 function getJsonString(){
     console.log("Fetching JSON String from server...");
-    fetch('/data').then(respons => response.json()).then((comment) => comment.forEach(comment)){
+    fetch('/data').then(response => response.json()).then((comment) => comment.forEach(comment)){
         const myComment = document.getElementById('comment-section');
         myComment.innerHTML= "";
     }
@@ -128,15 +128,53 @@ function initMap() {
 
     // New Iberia Marker
     var new_iberia = {lat: 30.005417, lng: -91.818665};
-    marker = new google.maps.Marker({position: new_iberia, map: map});
+    marker = new google.maps.Marker({position: new_iberia, map: map, animation: google.maps.Animation.DROP, draggable: true, title:"Drag Me!"});
 
     // XULA Marker 
     var new_orleans = {lat: 29.9652, lng: -90.1070};
-    marker2 = new google.maps.Marker({position: new_orleans, map: map});
+    marker2 = new google.maps.Marker({position: new_orleans, map: map, animation: google.maps.Animation.DROP});
     
     // Lafayette Marker 
     var lafayette = {lat: 30.2241, lng: -92.0198};
-    marker3 = new google.maps.Marker({position: lafayette, map: map});
+    marker3 = new google.maps.Marker({position: lafayette, map: map, animation: google.maps.Animation.DROP});
+
+    // Creating content for info window
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">New Iberia</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>New Iberia</b>, my hometown, is the largest city in, and parish seat of, Iberia Parish, Louisiana, United States.'+ 
+      'It is located 21 miles southeast of Lafayette' + 'New Iberia dates from mid-1779,'+
+      ' when a group of some 500 Malagueños colonists from Spain, led by Lt.Col. Francisco Bouligny, '+
+      'came up Bayou Teche and settled around what became known'+ 
+      'Spanish Lake (because they were the first Europeans to settle here).' + 
+      'In 1814, a decade after the United States acquired the territory in the Louisiana Purchase, '+
+      'the federal government opened a post office here. '+
+      'It was officially known as "New Iberia," '+
+      'but postmarks of the time show that the town was being called "Nova Iberia" (with Latin for "new"). '+
+      'The town was incorporated as "Iberia" in 1839; the state legislature resolved the situation in 1847, '+
+      'naming the town New Iberia.</p>'+
+      '<p>Attribution: New Iberia <a href="https://en.wikipedia.org/wiki/New_Iberia,_Louisiana</a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+
+    // Creating InfoWindow Object
+    var infowindow = new google.maps.InfoWindow({
+    content: contentString
+    });
+
+    // when the user hovers over the marker, the info window opens
+    marker.addListener('mouseover', function() {
+        infowindow.open(map, marker);
+    });
+
+    // when the user stops hovering over the marker, the info window closes
+    marker.addListener('mouseout', function() {
+        infowindow.close(map, marker);
+    });
 }
 
 /**
