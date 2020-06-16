@@ -17,7 +17,7 @@
 */
 function getJsonString(){
     console.log("Fetching JSON String from server...");
-    fetch('/data').then(response => response.json()).then((comment) => comment.forEach(comment)){
+    fetch('/data').then(response => response.json()).then((comment) => comment.forEach(comment));{
         const myComment = document.getElementById('comment-section');
         myComment.innerHTML= "";
     }
@@ -175,6 +175,48 @@ function initMap() {
     marker.addListener('mouseout', function() {
         infowindow.close(map, marker);
     });
+}
+
+
+/**
+* Google Charts
+*/
+google.charts.load('current', {'packages':['geochart'], 'mapsApiKey': 'AIzaSyA5TlaBDGHHlIE04CF6OprrVulz3-ZdfuU'});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+
+    /** Fetches covid-19 data and uses it to create a chart. */
+    // ** not working :(
+    // fetch('/covid19-data').then(response => response.json())
+    // .then((covid_cases) => {
+    //     const data = new google.visualization.arrayToDataTable([
+    //         ['Country', 'Number of Confirmed Cases'],
+    //         Object.keys(covid_cases).forEach((country) => {
+    //             data.add([country, covid_cases[country]]);
+    //         })
+    //     ])
+
+    var data = google.visualization.arrayToDataTable([
+        ['Country', 'Confirmed Covid-19 Cases'],
+        ['United States', 2096902],
+        ['Brazil', 867624],
+        ['Russia', 536484],
+        ['Canada', 100420],
+        ['France', 194153],
+        ['China', 84338],
+        ['South Africa', 70038],
+        ['Italy', 236989],
+        ['South Korea', 12121],
+        ['India', 332424],
+        ['United Kingdom', 297342]
+    ]);
+
+        var options = {};
+        
+        var chart = new google.visualization.GeoChart(document.getElementById('my-chart'));
+
+        chart.draw(data, options);
 }
 
 /**
