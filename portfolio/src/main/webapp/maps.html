@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
+        <!--above: takes care of device width-->
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Maps</title>
+        <link rel = "stylesheet" href="style.css">
+
+        <!--loading the Maps JavaScript API...-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5TlaBDGHHlIE04CF6OprrVulz3-ZdfuU&callback=initMap&libraries=places&v=weekly" defer>
+        </script>
+        <!--Link maps.html to script.js-->
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <!--Start Header-->
+        <header id = "top">
+            <h1>Google Maps API</h1>
+        </header>
+        <h3>Check out the Google Maps API below: </h3>
+        <p>**if the map doesn't load automatically, refresh the page**</p>
+        <div id ="map">
+            <!--Holds map-->
+        </div>
+    </body>
+</html>
